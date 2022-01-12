@@ -10,7 +10,7 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package.json yarn.lock ./
 
-RUN yarn install
+RUN YARN_REGISTRY="https://registry.npmjs.org" yarn install
 # If you are building your code for production
 # RUN npm ci --only=production
 
