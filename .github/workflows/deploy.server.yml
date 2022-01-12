@@ -34,6 +34,7 @@ jobs:
         with:
           context: ./portfolio-server
           push: true
+          platforms: linux/arm64
           tags: cloud.canister.io:5000/josemasri/portfolio-server
       - name: Restart service
         if: steps.changes.outputs.server == 'true'

@@ -1,12 +1,9 @@
 version: "3.9"
 
 services:
-  nextjs-dev:
+  client:
     ports:
       - 3000:3000
-    build:
-      context: ./portfolio-client
-      dockerfile: Dockerfile
     image: cloud.canister.io:5000/josemasri/portfolio-client
     container_name: portfolio-client
     depends_on:
@@ -21,10 +18,7 @@ services:
       - "5432:5432"
   server:
     image: cloud.canister.io:5000/josemasri/portfolio-server
-    build:
-      context: ./portfolio-server
-      dockerfile: Dockerfile
-    command: yarn develop
+    command: yarn start
     volumes:
       - server-images:/app/public/uploads
     env_file: .env

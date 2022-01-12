@@ -34,6 +34,7 @@ jobs:
         with:
           push: true
           context: ./portfolio-client
+          platforms: linux/arm64
           tags: cloud.canister.io:5000/josemasri/portfolio-client
       - 
         name: Restart service
@@ -43,4 +44,4 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd /home/jose/source/portfolio && docker pull cloud.canister.io:5000/josemasri/portfolio-client && docker-compose up -d --no-deps nextjs-dev
+          script: cd /home/jose/source/portfolio && docker pull cloud.canister.io:5000/josemasri/portfolio-client && docker-compose up -d --no-deps client
