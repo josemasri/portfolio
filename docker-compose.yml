@@ -27,7 +27,7 @@ services:
     image: josemasri:portfolio-server
     build:
       context: ./portfolio-server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     command: yarn develop
     volumes:
       - ./portfolio-server:/app

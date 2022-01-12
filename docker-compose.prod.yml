@@ -5,7 +5,7 @@ services:
     ports:
       - 3000:3000
     image: cloud.canister.io:5000/josemasri/portfolio-client
-    container_name: portfolio-client
+    container_name: portfolio-client-prod
     depends_on:
       - server
   db:
@@ -13,7 +13,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     env_file: .env
-    container_name: portfolio-db
+    container_name: portfolio-db-prod
     ports:
       - "5432:5432"
   server:
@@ -22,7 +22,9 @@ services:
     volumes:
       - server-images:/app/public/uploads
     env_file: .env
-    container_name: portfolio-server
+    environment:
+      - NODE_ENV=production
+    container_name: portfolio-server-prod
     ports:
       - "1337:1337"
     depends_on:

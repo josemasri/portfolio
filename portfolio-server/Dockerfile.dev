@@ -17,6 +17,6 @@ RUN yarn install
 # Bundle app source
 COPY . .
 
-RUN NODE_ENV=production yarn build
+RUN yarn build
 
 EXPOSE 1337
