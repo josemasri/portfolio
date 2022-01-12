@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: ./client
+          context: ./portfolio-client
           tags: cloud.canister.io:5000/josemasri/portfolio-client
       - 
         name: Restart service
