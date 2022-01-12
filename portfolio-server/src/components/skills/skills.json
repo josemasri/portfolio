@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "displayName": "skills",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "loadMore": {
+      "type": "string"
+    },
+    "years": {
+      "type": "string"
+    }
+  }
+}

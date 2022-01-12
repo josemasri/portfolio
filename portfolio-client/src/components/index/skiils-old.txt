@@ -1,0 +1,463 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+
+import {
+  SiTypescript,
+  SiReact,
+  SiJavascript,
+  SiNestjs,
+  SiVuedotjs,
+  SiCss3,
+  SiNextdotjs,
+  SiGo,
+  SiAngular,
+  SiGatsby,
+  SiHtml5,
+  SiPython,
+  SiGraphql,
+  SiMysql,
+  SiMongodb,
+  SiDocker,
+  SiKubernetes,
+  SiFlutter,
+  SiReactivex,
+  SiIonic,
+  SiLinux,
+  SiC,
+  SiCplusplus,
+  SiStrapi,
+  SiWordpress,
+  SiShopify,
+  SiExpress,
+  SiNodedotjs,
+  SiPhp,
+  SiGooglecloud,
+  SiAmazonaws,
+  SiDigitalocean,
+  SiLatex,
+  SiJava,
+  SiLaravel,
+  SiMarkdown,
+  SiGit,
+  SiGithub,
+  SiGithubactions,
+  SiNginx,
+  SiVisualstudiocode,
+  SiIntellijidea,
+  SiApache,
+  SiGnubash,
+  SiR,
+  SiAlgolia,
+  SiSocketdotio,
+  SiRedis,
+  SiApachekafka,
+  SiRabbitmq,
+  SiSolidity,
+  SiPostgresql
+} from "react-icons/si";
+
+import Skill from "./skill";
+
+const Skills = () => {
+  const [viewAll, setViewAll] = useState(false);
+
+  const toggleViewMore = () => {
+    setViewAll(!viewAll);
+  };
+
+  return (
+    <section className="mb-8">
+      <h3 className="font-bold text-xl mb-3">Skills and Experience</h3>
+      <ul className="lg:grid grid-cols-2 lg:gap-5">
+        <Skill
+          name="HTML"
+          Icon={SiHtml5}
+          years={7}
+          gradient="from-orange-300 via-orange-500 to-orange-800"
+          textColor="text-orange-500"
+        />
+        <Skill
+          name="CSS"
+          Icon={SiCss3}
+          years={7}
+          gradient="from-blue-300 via-blue-500 to-blue-800"
+          textColor="text-blue-500"
+        />
+        <Skill
+          name="Javascript"
+          Icon={SiJavascript}
+          years={7}
+          gradient="from-yellow-300 via-yellow-500 to-yellow-800"
+          textColor="text-yellow-500"
+        />
+        <Skill
+          name="Typescript"
+          Icon={SiTypescript}
+          years={5}
+          gradient="from-indigo-500 via-purple-500 to-pink-500"
+          textColor="text-blue-500"
+        />
+        {viewAll && (
+          <>
+            <Skill
+              name="React"
+              Icon={SiReact}
+              years={4}
+              gradient="from-indigo-500 via-purple-500 to-pink-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Angular"
+              Icon={SiAngular}
+              years={4}
+              gradient="from-red-300 via-red-500 to-red-800"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="VueJs"
+              Icon={SiVuedotjs}
+              years={2}
+              gradient="from-green-300 via-green-500 to-green-800"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="React Native"
+              Icon={SiReact}
+              years={3}
+              gradient="from-blue-200 via-blue-400 to-blue-500"
+              textColor="text-blue-400"
+            />
+            <Skill
+              name="Flutter"
+              Icon={SiFlutter}
+              years={3}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Ionic"
+              Icon={SiIonic}
+              years={4}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="NextJs"
+              Icon={SiNextdotjs}
+              years={3}
+              gradient="from-blue-600 via-blue-800 to-black"
+              textColor=""
+            />
+            <Skill
+              name="NodeJs"
+              Icon={SiNodedotjs}
+              years={5}
+              gradient="from-green-300 via-green-500 to-green-800"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="Socket.io"
+              Icon={SiSocketdotio}
+              years={2}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+            <Skill
+              name="NestJs"
+              Icon={SiNestjs}
+              years={4}
+              gradient="from-red-300 via-red-500 to-red-800"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="Express"
+              Icon={SiExpress}
+              years={5}
+              gradient="from-red-300 via-red-500 to-red-800"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="GatsbyJs"
+              Icon={SiGatsby}
+              years={2}
+              gradient="from-purple-300 via-purple-500 to-purple-800"
+              textColor="text-purple-500"
+            />
+            <Skill
+              name="Python"
+              Icon={SiPython}
+              years={2}
+              gradient="from-blue-500 via-blue-300 to-yellow-500"
+              textColor="text-yellow-500"
+            />
+            <Skill
+              name="R"
+              Icon={SiR}
+              years={1}
+              gradient="from-blue-500 via-blue-300 to-blue-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="GraphQL"
+              Icon={SiGraphql}
+              years={2}
+              gradient="from-pink-300 via-pink-500 to-pink-800"
+              textColor="text-pink-500"
+            />
+            <Skill
+              name="SQL"
+              Icon={SiMysql}
+              years={6}
+              gradient="from-blue-300 via-blue-500 to-orange-500"
+              textColor="text-orange-500"
+            />
+            <Skill
+              name="PostgreSQL"
+              Icon={SiPostgresql}
+              years={5}
+              gradient="from-blue-300 via-blue-500 to-blue-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="MongoDb"
+              Icon={SiMongodb}
+              years={5}
+              gradient="from-green-300 via-green-500 to-green-500"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="Redis"
+              Icon={SiRedis}
+              years={2}
+              gradient="from-red-300 via-red-500 to-red-500"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="Apache Kafka"
+              Icon={SiApachekafka}
+              years={1}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+            <Skill
+              name="RabbitMQ"
+              Icon={SiRabbitmq}
+              years={1}
+              gradient="from-orange-300 via-orange-500 to-orange-800"
+              textColor="text-orange-500"
+            />
+            <Skill
+              name="Docker"
+              Icon={SiDocker}
+              years={2}
+              gradient="from-blue-300 via-blue-500 to-blue-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Kubernetes"
+              Icon={SiKubernetes}
+              years={1}
+              gradient="from-blue-300 via-blue-500 to-blue-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Linux"
+              Icon={SiLinux}
+              years={6}
+              gradient="from-yellow-300 via-yellow-500 to-yellow-800"
+              textColor=""
+            />
+            <Skill
+              name="Go"
+              Icon={SiGo}
+              years={2}
+              gradient="from-indigo-500 via-blue-300 to-blue-400"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="PHP"
+              Icon={SiPhp}
+              years={2}
+              gradient="from-indigo-500 via-blue-300 to-blue-400"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Laravel"
+              Icon={SiLaravel}
+              years={2}
+              gradient="from-red-300 via-red-500 to-red-800"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="C"
+              Icon={SiC}
+              years={4}
+              gradient="from-purple-300 via-purple-500 to-purple-800"
+              textColor="text-purple-500"
+            />
+            <Skill
+              name="C++"
+              Icon={SiCplusplus}
+              years={2}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Bash"
+              Icon={SiGnubash}
+              years={3}
+              gradient="from-gray-300 via-gray-500 to-black"
+              textColor=""
+            />
+            <Skill
+              name="Java"
+              Icon={SiJava}
+              years={2}
+              gradient="from-orange-300 via-orange-500 to-orange-800"
+              textColor="text-orange-500"
+            />
+            <Skill
+              name="Wordpress"
+              Icon={SiWordpress}
+              years={2}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Shopify"
+              Icon={SiShopify}
+              years={3}
+              gradient="from-green-300 via-green-500 to-green-800"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="Strapi"
+              Icon={SiStrapi}
+              years={2}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Google Cloud Platform"
+              Icon={SiGooglecloud}
+              years={3}
+              gradient="from-red-500 via-green-500 to-blue-800"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="Amazon Web Services"
+              Icon={SiAmazonaws}
+              years={3}
+              gradient="from-yellow-300 via-yellow-500 to-yellow-800"
+              textColor="text-yellow-500"
+            />
+            <Skill
+              name="Digital Ocean"
+              Icon={SiDigitalocean}
+              years={3}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Algolia"
+              Icon={SiAlgolia}
+              years={1}
+              gradient="from-blue-500 via-blue-300 to-blue-500"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="LaTex"
+              Icon={SiLatex}
+              years={3}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="Markdown"
+              Icon={SiMarkdown}
+              years={2}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+            <Skill
+              name="Git"
+              Icon={SiGit}
+              years={6}
+              gradient="from-orange-300 via-orange-500 to-orange-800"
+              textColor="text-orange-500"
+            />
+            <Skill
+              name="Github"
+              Icon={SiGithub}
+              years={6}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+            <Skill
+              name="Github Actions"
+              Icon={SiGithubactions}
+              years={1}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+            <Skill
+              name="Nginx"
+              Icon={SiNginx}
+              years={4}
+              gradient="from-green-300 via-green-500 to-green-800"
+              textColor="text-green-500"
+            />
+            <Skill
+              name="Apache"
+              Icon={SiApache}
+              years={4}
+              gradient="from-red-300 via-red-500 to-red-800"
+              textColor="text-red-500"
+            />
+            <Skill
+              name="VS Code"
+              Icon={SiVisualstudiocode}
+              years={6}
+              gradient="from-blue-300 via-blue-500 to-blue-800"
+              textColor="text-blue-500"
+            />
+            <Skill
+              name="IntelliJ"
+              Icon={SiIntellijidea}
+              years={6}
+              gradient="from-pink-300 via-pink-500 to-pink-800"
+              textColor="text-pink-500"
+            />
+            <Skill
+              name="Solidity"
+              Icon={SiSolidity}
+              years={1}
+              gradient="from-gray-300 via-gray-500 to-gray-800"
+              textColor=""
+            />
+          </>
+        )}
+      </ul>
+      {viewAll ? (
+        <button
+          onClick={toggleViewMore}
+          className="flex justify-center items-center py-2 w-full bg-gradient-to-r from-red-300 via-red-500 to-red-800 shadow-lg shadow-red-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+        >
+          <FaChevronUp className="mr-2 text-xl font-bold" />
+          <span>View Less</span>
+        </button>
+      ) : (
+        <button
+          onClick={toggleViewMore}
+          className="flex justify-center items-center py-2 w-full bg-gradient-to-r from-green-300 via-green-500 to-green-800 shadow-lg shadow-green-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+        >
+          <FaChevronDown className="mr-2 text-xl font-bold" />
+          <span>View More</span>
+        </button>
+      )}
+    </section>
+  );
+};
+
+export default Skills;

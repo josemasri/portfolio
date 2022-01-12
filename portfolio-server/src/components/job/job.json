@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_job_jobs",
+  "info": {
+    "displayName": "job",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
