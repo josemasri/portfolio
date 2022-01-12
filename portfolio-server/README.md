@@ -1,3 +1,2 @@
 # Strapi application
-
-Strapi for Portfolio
+My Portfolio
