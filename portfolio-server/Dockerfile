@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM --platform=linux/amd64 node:16-alpine
 
 RUN apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash
 
@@ -10,7 +10,7 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package.json yarn.lock ./
 
-RUN YARN_REGISTRY="https://registry.npmjs.org" yarn install
+RUN yarn install
 # If you are building your code for production
 # RUN npm ci --only=production
 
