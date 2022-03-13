@@ -10,11 +10,11 @@ const AboutMe: FunctionComponent<AboutMeInfoAttributes> = ({
 }) => {
   return (
     <main className="mt-5">
-      <div className="w-1/4 mb-5">
+      <div className="h-32 w-32 relative">
         <Image
-          className="overflow-hidden rounded-full grayscale"
-          width={200}
-          height={200}
+          layout="fill" // required
+          objectFit="cover" // change to suit your needs
+          className="rounded-full"
           src={`${process.env.NEXT_PUBLIC_API_URL}${picture.data.attributes.url}`}
           alt="Me"
         />

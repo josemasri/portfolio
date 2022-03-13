@@ -14,12 +14,12 @@ const Job: FunctionComponent<Props> = ({ job }) => {
     <article className="w-60 h-100 snap-center shrink-0 first:pl-8 last:mr-8 mb-5 transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 shadow-lg shadow-blue-500 from-pink-500 via-blue-500 to-indigo-800">
       <div className="<flex flex-col justify-between bg-white dark:bg-gray-900 rounded-lg p-4">
         <h4 className="font-bold text-xl mb-2">{job.attributes.company}</h4>
-        <div className="w-full">
+        <div className="h-24 relative">
           <Image
-            width={400}
-            height={150}
             src={`${process.env.NEXT_PUBLIC_API_URL}${job.attributes.image.data.attributes.url}`}
             alt="Job"
+            layout="fill"
+            objectFit="contain"
           />
         </div>
         <h5>

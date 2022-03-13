@@ -18,12 +18,12 @@ const Project: FunctionComponent<Props> = ({ project }) => {
         <div className="w-full mb-2">
           <Carousel autoPlay={true} showStatus={false} showThumbs={false}>
             {project.attributes.images.data.map((image) => (
-              <div key={image.attributes.url}>
+              <div className="h-24 relative" key={image.attributes.url}>
                 <Image
-                  width={400}
-                  height={200}
                   src={`${process.env.NEXT_PUBLIC_API_URL}${image.attributes.url}`}
                   alt="Project"
+                  layout="fill"
+                  objectFit="contain"
                 />
               </div>
             ))}
