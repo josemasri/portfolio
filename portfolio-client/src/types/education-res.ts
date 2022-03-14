@@ -1,8 +1,8 @@
-export interface EducationRes {
-    education: Education;
+export interface EducationsRes {
+    education: Educations;
 }
 
-export interface Education {
+export interface Educations {
     data: EducationData[];
 }
 

@@ -1,10 +1,10 @@
 import { gql } from "@apollo/client";
 import client from "../client";
-import { EducationRes } from "../../types/education-res";
+import { EducationsRes } from "../../types/education-res";
 
 const GET_EDUCATION = gql`
   query ($locale: I18NLocaleCode) {
-    projects(locale: $locale) {
+    educations(locale: $locale) {
       data {
         id
         attributes {
@@ -26,7 +26,7 @@ const GET_EDUCATION = gql`
 
 const getEducation = (locale: string) =>
   client().query<
-    EducationRes,
+    EducationsRes,
     {
       locale: string;
     }

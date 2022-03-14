@@ -43,7 +43,7 @@ export const getServerSideProps = async (
   } = await getProjects(language);
 
   const {
-    data: { education }
+    data: { educations }
   } = await getEducation(language);
 
   return {
@@ -54,7 +54,7 @@ export const getServerSideProps = async (
         label,
         jobs,
         projects,
-        education
+        educations
       }
     }
   };
@@ -74,7 +74,7 @@ function Home({
       <Skills labels={data.label.data.attributes.skills} skills={data.skills} />
       <JobExperience labels={data.label.data.attributes.job} jobs={data.jobs.data} />
       <Portfolio labels={data.label.data.attributes.portfolio} projects={data.projects.data} />
-      <Education labels={data.label.data.attributes.education} education={data.education.data} />
+      <Education labels={data.label.data.attributes.education} education={data.educations.data} />
       <Contact labels={data.label.data.attributes.contact} />
       <footer></footer>
     </div>
