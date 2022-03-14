@@ -12,8 +12,8 @@ const Project: FunctionComponent<Props> = ({ project }) => {
   const [isViewMore, setIsViewMore] = useState(false);
   const toggleViewMore = () => setIsViewMore(!isViewMore);
   return (
-    <article className="w-60 h-100 snap-center shrink-0 first:pl-8 last:mr-8 mb-5 transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 shadow-lg shadow-blue-500 from-pink-500 via-blue-500 to-indigo-800">
-      <div className="<flex flex-col justify-between bg-white dark:bg-gray-900 rounded-lg p-4">
+    <article className="w-60 snap-center shrink-0 first:pl-8 last:mr-8 mb-5 transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 shadow-lg shadow-blue-500 from-pink-500 via-blue-500 to-indigo-800">
+      <div className="h-[28rem] flex flex-col justify-between overflow-scroll bg-white dark:bg-gray-900 rounded-lg p-4">
         <h4 className="font-bold text-xl mb-2">{project.attributes.name}</h4>
         <div className="w-full mb-2">
           <Carousel autoPlay={true} showStatus={false} showThumbs={false}>
@@ -30,28 +30,34 @@ const Project: FunctionComponent<Props> = ({ project }) => {
           </Carousel>
         </div>
 
-        {isViewMore ? (
+        {project.attributes.description.split(" ").length > 20 ? (
           <>
-            <p>{project.attributes.description}</p>
-            <button
-              onClick={toggleViewMore}
-              className="text-blue-500 flex items-center"
-            >
-              <FaChevronUp className="mr-2" /> View Less
-            </button>
+            {isViewMore ? (
+              <>
+                <p>{project.attributes.description}</p>
+                <button
+                  onClick={toggleViewMore}
+                  className="text-blue-500 flex items-center"
+                >
+                  <FaChevronUp className="mr-2" /> View Less
+                </button>
+              </>
+            ) : (
+              <>
+                <p>
+                  {project.attributes.description.split(" ").slice(0, 20).join(" ")}
+                </p>
+                <button
+                  onClick={toggleViewMore}
+                  className="text-blue-500 flex items-center"
+                >
+                  <FaChevronDown className="mr-2" /> View More
+                </button>
+              </>
+            )}
           </>
         ) : (
-          <>
-            <p>
-              {project.attributes.description.split(" ").slice(0, 20).join(" ")}
-            </p>
-            <button
-              onClick={toggleViewMore}
-              className="text-blue-500 flex items-center"
-            >
-              <FaChevronDown className="mr-2" /> View More
-            </button>
-          </>
+          <p>{project.attributes.description}</p>
         )}
         <a
           rel="noreferrer"
