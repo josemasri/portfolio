@@ -58,6 +58,16 @@
         }
       },
       "component": "contact.contact"
+    },
+    "education": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "job.job"
     }
   }
 }
