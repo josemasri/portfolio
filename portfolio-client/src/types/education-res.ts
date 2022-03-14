@@ -1,5 +1,5 @@
 export interface EducationsRes {
-    education: Educations;
+    educations: Educations;
 }
 
 export interface Educations {
