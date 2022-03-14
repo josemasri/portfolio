@@ -71,7 +71,7 @@ function Home({
         <meta property="og:title" content="Jose Masri - Senior Full Stack Engineer" />
         <meta name="description" content="Hi i'm Jose Masri, a Fullstack Engineer Manager at Jellyfish. Develop High level, scallable and high performant solutions for top companies" />
         <meta property="og:url" content="https://josemasri.com" />
-        <meta property="og:description" content="description of your website/webpage" />
+        <meta property="og:description" content="Hi i'm Jose Masri, a Fullstack Engineer Manager at Jellyfish. Develop High level, scallable and high performant solutions for top companies" />
         <meta property="og:image" content="https://josemasri.com/images/seo-image.png" />
         <meta property="og:type" content="article" />
         <link rel="icon" href="/favicon.ico" />
