@@ -18,6 +18,9 @@ const GET_LABELS = gql`
           portfolio {
             title
           }
+          education {
+            title
+          }
           contact {
             title
             name

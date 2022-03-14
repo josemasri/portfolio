@@ -15,6 +15,8 @@ export interface Attributes {
   job: Job;
   portfolio: Job;
   contact: Contact;
+  education: Education;
+
 }
 
 export interface Contact {
@@ -33,4 +35,8 @@ export interface Skills {
   title: string;
   loadMore: string;
   years: string;
+}
+
+export interface Education {
+  title: string;
 }

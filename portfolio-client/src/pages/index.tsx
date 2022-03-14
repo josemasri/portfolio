@@ -16,6 +16,8 @@ import getSkills from "../gql/querys/get-skills";
 import getLabels from "../gql/querys/get-labels";
 import getJobs from "../gql/querys/get-jobs";
 import getProjects from "../gql/querys/get-projects";
+import Education from "../components/index/education";
+import getEducation from "../gql/querys/get-education";
 
 export const getServerSideProps = async (
   context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
@@ -40,6 +42,10 @@ export const getServerSideProps = async (
     data: { projects }
   } = await getProjects(language);
 
+  const {
+    data: { education }
+  } = await getEducation(language);
+
   return {
     props: {
       data: {
@@ -47,7 +53,8 @@ export const getServerSideProps = async (
         skills,
         label,
         jobs,
-        projects
+        projects,
+        education
       }
     }
   };
@@ -67,6 +74,7 @@ function Home({
       <Skills labels={data.label.data.attributes.skills} skills={data.skills} />
       <JobExperience labels={data.label.data.attributes.job} jobs={data.jobs.data} />
       <Portfolio labels={data.label.data.attributes.portfolio} projects={data.projects.data} />
+      <Education labels={data.label.data.attributes.education} education={data.education.data} />
       <Contact labels={data.label.data.attributes.contact} />
       <footer></footer>
     </div>
