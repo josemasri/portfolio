@@ -19,7 +19,7 @@ const Job: FunctionComponent<Props> = ({ job }) => {
             src={`${process.env.NEXT_PUBLIC_API_URL}${job.attributes.image.data.attributes.url}`}
             alt="Job"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <h5>

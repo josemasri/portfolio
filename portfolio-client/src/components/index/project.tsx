@@ -28,7 +28,7 @@ const Project: FunctionComponent<Props> = ({ project }) => {
                   src={`${process.env.NEXT_PUBLIC_API_URL}${image.attributes.url}`}
                   alt="Project"
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
             ))}
