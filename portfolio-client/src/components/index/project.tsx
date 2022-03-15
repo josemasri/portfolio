@@ -16,7 +16,12 @@ const Project: FunctionComponent<Props> = ({ project }) => {
       <div className="h-[28rem] flex flex-col justify-between overflow-scroll bg-white dark:bg-gray-900 rounded-lg p-4">
         <h4 className="font-bold text-xl mb-2">{project.attributes.name}</h4>
         <div className="w-full mb-2">
-          <Carousel autoPlay={true} showStatus={false} showThumbs={false}>
+          <Carousel
+            showIndicators={false}
+            autoPlay={true}
+            showStatus={false}
+            showThumbs={false}
+          >
             {project.attributes.images.data.map((image) => (
               <div className="h-24 relative" key={image.attributes.url}>
                 <Image
@@ -45,7 +50,10 @@ const Project: FunctionComponent<Props> = ({ project }) => {
             ) : (
               <>
                 <p>
-                  {project.attributes.description.split(" ").slice(0, 20).join(" ")}
+                  {project.attributes.description
+                    .split(" ")
+                    .slice(0, 20)
+                    .join(" ")}
                 </p>
                 <button
                   onClick={toggleViewMore}

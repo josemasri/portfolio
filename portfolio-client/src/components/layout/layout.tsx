@@ -1,5 +1,6 @@
 import { FunctionComponent, useContext } from "react";
 import { SettingsContext } from "../../context/settings-context";
+import Footer from "./footer";
 import Header from "./header";
 
 const Layout: FunctionComponent = ({ children }) => {
@@ -10,6 +11,7 @@ const Layout: FunctionComponent = ({ children }) => {
         <div className="max-w-4xl mx-auto">
           <Header />
           {children}
+          <Footer />
         </div>
       </div>
     </div>
