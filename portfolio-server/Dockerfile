@@ -19,4 +19,6 @@ COPY . .
 
 RUN NODE_ENV=production yarn build
 
+CMD [ "yarn", "start" ]
+
 EXPOSE 1337
